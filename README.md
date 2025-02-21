@@ -127,25 +127,26 @@ Database migrations có thể được tự động thực hiện khi ứng dụ
 Ứng dụng có thể tích hợp middleware xác thực để bảo vệ các endpoints. Middleware này có thể kiểm tra token (ví dụ: JWT) trong header `Authorization` và xác thực người dùng.
 
 **Lưu ý:** Logic xác thực và phân quyền cụ thể cần được implement tùy theo yêu cầu của dự án.
-
 ## Cấu trúc dự án
+```
 <your-project-folder>/
 ├── cmd/
-│ └── app/ # Điểm vào của ứng dụng (main.go)
+│   └── app/                  # Điểm vào của ứng dụng (main.go)
 ├── internal/
-│ ├── controllers/ # Controllers xử lý logic API
-│ ├── database/ # Code liên quan đến database (connection, migration)
-│ ├── middleware/ # Middlewares (ví dụ: xác thực, logging)
-│ ├── models/ # Định nghĩa các model (structs)
-│ ├── routes/ # Định nghĩa các routes và đăng ký controllers
-│ ├── config/ # (Tùy chọn) Cấu hình ứng dụng
-│ ├── repository/ # (Tùy chọn) Repository pattern
-│ ├── services/ # (Tùy chọn) Service layer
-│ └── utils/ # (Tùy chọn) Các utility functions
-├── pkg/ # (Tùy chọn) Các package dùng chung
-├── go.mod # Go modules definition
-├── go.sum # Checksums của dependencies
-└── README.md # File README dự án (file này)
+│   ├── controllers/          # Controllers xử lý logic API
+│   ├── database/            # Code liên quan đến database (connection, migration)
+│   ├── middleware/          # Middlewares (ví dụ: xác thực, logging)
+│   ├── models/              # Định nghĩa các model (structs)
+│   ├── routes/              # Định nghĩa các routes và đăng ký controllers
+│   ├── config/             # (Tùy chọn) Cấu hình ứng dụng
+│   ├── repository/         # (Tùy chọn) Repository pattern
+│   ├── services/           # (Tùy chọn) Service layer
+│   └── utils/              # (Tùy chọn) Các utility functions
+├── pkg/                     # (Tùy chọn) Các package dùng chung
+├── go.mod                   # Go modules definition
+├── go.sum                   # Checksums của dependencies
+└── README.md               # File README dự án (file này)
+```
 
 ## Đóng góp
 
